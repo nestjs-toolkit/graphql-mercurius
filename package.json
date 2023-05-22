@@ -1,12 +1,12 @@
 {
   "name": "@nestjs-toolkit/graphql-mercurius",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "NestJS Toolkit - GraphQL Mercurius",
   "author": "Valmir Barbosa",
   "license": "MIT",
   "scripts": {
     "build": "rimraf -rf dist && tsc -p tsconfig.build.json && yarn copy",
-    "copy": "cp package.json README.md LICENSE dist",
+    "copy": "cp package.json README.md LICENSE dist && mkdir -p dist/schemas && cp lib/**/*.graphql dist/schemas",
     "prepare": "",
     "format": "prettier --write \"{lib,tests}/**/*.ts\"",
     "lint": "eslint \"{lib,tests}/**/*.ts\" --fix",
