@@ -957,10 +957,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs-toolkit/base@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@nestjs-toolkit/base@npm:2.0.1"
+  peerDependencies:
+    "@nestjs/common": ^8.0.0 || ^9.0.0
+    joi: "*"
+    moment: "*"
+    moment-timezone: "*"
+  checksum: 5898e373d9dec9e47080095c9239210ee806120007c2b750e3edc97a96b7eaec9ac101ad091f1c645e584feb1e1a604a70894a2c27c3ad17d3371913cf1d8fc9
+  languageName: node
+  linkType: hard
+
 "@nestjs-toolkit/graphql-mercurius@workspace:.":
   version: 0.0.0-use.local
   resolution: "@nestjs-toolkit/graphql-mercurius@workspace:."
   dependencies:
+    "@nestjs-toolkit/base": ^2.0.1
     "@nestjs/cli": ^9.0.0
     "@nestjs/common": ^9.0.0
     "@nestjs/core": ^9.0.0
@@ -991,6 +1004,7 @@ __metadata:
     tsconfig-paths: 4.2.0
     typescript: ^5.0.0
   peerDependencies:
+    "@nestjs-toolkit/base": "*"
     "@nestjs/common": ^8.0.0 || ^9.0.0
     joi: "*"
     moment: "*"
