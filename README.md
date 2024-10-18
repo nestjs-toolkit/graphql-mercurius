@@ -22,6 +22,10 @@ import {CustomDateResolver, CustomNumberResolver} from '@nestjs-toolkit/graphql-
         GraphQLModule.forRoot<MercuriusDriverConfig>({
             driver: MercuriusDriver,
             graphiql: true,
+            typePaths: [
+                './**/*.graphql',
+                './node_modules/@nestjs-toolkit/graphql-mercurius/schemas/*.graphql'
+            ]
         }),
     ],
     providers: [CustomDateResolver, CustomNumberResolver],

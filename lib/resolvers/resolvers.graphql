@@ -46,4 +46,11 @@ type CustomNumber {
     fixed(digits: Int!): String
 
     format(before: String, after: String, digits: Int = 2): String
+
+    currency(
+        locale: String = "pt-BR"
+        before: String
+        after: String
+        digits: Int = 2
+    ): String
 }

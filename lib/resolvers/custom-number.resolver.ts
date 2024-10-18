@@ -27,4 +27,14 @@ export class CustomNumberResolver {
   format(number: number, { digits, after, before }): string {
     return `${after || ''}${currencyFormat(number, digits)}${before || ''}`;
   }
+
+  @ResolveField()
+  currency(number: number, { locale, digits, after, before }): string {
+    const value = new Intl.NumberFormat(locale || 'pt-BR', {
+      minimumFractionDigits: digits || 2,
+      maximumFractionDigits: digits || 2,
+    }).format(number);
+
+    return `${after || ''}${value}${before || ''}`;
+  }
 }
